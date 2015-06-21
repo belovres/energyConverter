@@ -1,0 +1,16 @@
+[
+{
+  "modid": "energyConvertor",
+  "name": "Energy Converter",
+  "description": "Example gui and using api's.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["belovres"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
