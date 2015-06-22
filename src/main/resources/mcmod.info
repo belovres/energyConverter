@@ -1,6 +1,6 @@
 [
 {
-  "modid": "energyConvertor",
+  "modid": "energyConverter",
   "name": "Energy Converter",
   "description": "Example gui and using api's.",
   "version": "${version}",
