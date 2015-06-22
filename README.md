@@ -1,2 +1,2 @@
-# energyConvertor
-Energy convertor in Minecraft mod
+# energyConverter
+Energy converter in Minecraft mod
