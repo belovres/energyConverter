@@ -1,7 +1,10 @@
-package com.belovres.energyConvertor;
+package com.belovres.energyConverter;
 
-import com.belovres.energyConvertor.proxy.IProxy;
-import com.belovres.energyConvertor.referense.Referense;
+import net.minecraftforge.common.config.Configuration;
+
+import com.belovres.energyConverter.configuration.ConfigurationHandler;
+import com.belovres.energyConverter.proxy.IProxy;
+import com.belovres.energyConverter.referense.Referense;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -12,17 +15,17 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Referense.MODID, name = Referense.NAME , version = Referense.VERSION)
-public class energyConvertor{
+public class energyConverter{
 	
-	@SidedProxy(serverSide = "com.belovres.energyConvertor.proxy.ServerProxy", clientSide = "com.belovres.energyConvertor.proxy.ClientProxy", modId = Referense.MODID)
+	@SidedProxy(serverSide = Referense.SERVERPROXY, clientSide = Referense.CLIENTPROXY, modId = Referense.MODID)
 	public static IProxy proxy;
-	@Instance("energyConvertor")
-	public static energyConvertor instance;
+	@Instance(Referense.MODID)
+	public static energyConverter instance;
 	
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
-		
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 	}
 	
     @EventHandler
