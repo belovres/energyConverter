@@ -1,6 +1,8 @@
 package com.belovres.energyConverter;
 
 import com.belovres.energyConverter.handler.ConfigurationHandler;
+import com.belovres.energyConverter.net.ModBlocks;
+import com.belovres.energyConverter.net.ModItems;
 import com.belovres.energyConverter.proxy.IProxy;
 import com.belovres.energyConverter.referense.Referense;
 
@@ -23,6 +25,8 @@ public class energyConverter{
 	public void preInit(FMLPreInitializationEvent event){
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		ModBlocks.init();
+		ModItems.init();
 	}
 	
     @Mod.EventHandler
